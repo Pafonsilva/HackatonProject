@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+
+    <link rel="stylesheet" href="loading.css" />
+    <link rel="stylesheet" href="SP.css">
+
+    
+
+    <title>SinglePlayer</title>
+  </head>
+  <style>
+    body{
+    background-image: url("images/california-sunset-evening-wallpaper.jpeg");
+    width: 1902px;
+    height: 1080px;
+    background-size: cover;
+    }
+  </style>
+  <body>
+    <div class="box" style="display: none">
+      <img src="images/loading.png" alt="loading" width="100%" height="100%" />
+    </div>
+    <div class="game" style="display: flex">
+      <span>
+        <h2>Player Name :</h2>
+        <img src="images/guessactor.png" alt="" class="actor" />
+        <img
+          src=""
+          alt=""
+          class="actor"
+          style="display: none"
+          id="right"
+        /><br /><br /><br>
+        <p class="actressName" style="display: none;margin-top: -2px;"></p>
+
+        <div class="content">
+          <h5 class="hits" style="color: white;font-weight: bold;font-size: bold;">
+      
+          </h5>
+          <br />
+          <div>
+            <div class="form-outline form-white mb-4">
+              <input type="text" id="answer"  class="form-control form-control-lg" placeholder="Type your anwser" style="margin-left: -11px;" />
+              
+            </div>
+
+            <button class="btn btn-outline-light btn-lg px-5" type="submit" id="switchActor">SUBMIT</button>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="gameRectangle">
+      <div
+        class="chooseName"
+        style="
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          align-content: space-around;
+          justify-content: center;
+          align-items: inherit;
+        "
+      >
+      <div class="form-outline form-white mb-4">
+        <input type="email" id="name" class="form-control form-control-lg" placeholder="Type your nickname" />
+        
+      </div>
+        
+        <br />
+        <button class="btn btn-outline-light btn-lg px-5"  id="start">Start</button>
+        <br>
+        <a href="mainPage.html">
+          <button class="btn btn-outline-light btn-lg px-5"  id="start">Back to Menu</button>
+        </a>
+      </div>
+    </div>
+  </body>
+
+  <script src="singleplayer.js" type="module"></script>
+</html>

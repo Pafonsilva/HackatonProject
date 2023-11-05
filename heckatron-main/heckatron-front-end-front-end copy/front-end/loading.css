@@ -1,0 +1,67 @@
+
+
+.box {
+	position: relative;
+	width: 536px;
+    height: 349px;
+    margin-top: 275px;
+    margin-left: 696px;
+	background: repeating-conic-gradient(
+		from var(--a),
+		#ffc927 0%,
+		#ffe927 5%,
+		transparent 5%,
+		transparent 40%,
+		#bca210 50%
+	);
+	border-radius: 20px;
+	animation: animate 4s linear infinite;
+}
+.box::before,
+.box::after {
+	content: "";
+	position: absolute;
+}
+.box::before {
+	width: 100%;
+	height: 100%;
+	background: repeating-conic-gradient(
+		from var(--a),
+		#b1b114 0%,
+		#b5af14 5%,
+		transparent 5%,
+		transparent 40%,
+		#c5e10e 50%
+	);
+	border-radius: 20px;
+	animation: animate 4s linear infinite;
+	animation-delay: -1s;
+}
+.box::after {
+	inset: 8px;
+	background: #faf393;
+	border-radius: 15px;
+}
+
+@property --a {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+@keyframes animate {
+	0% {
+		--a: 0deg;
+	}
+	100% {
+		--a: 360deg;
+	}
+}
+.box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 434px;
+    height: 449px;
+    z-index: 1;
+}
